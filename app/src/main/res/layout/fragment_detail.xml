@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/activity_hotizontal_margin"
+    android:layout_marginLeft="@dimen/activity_vertical_margin"
+    android:layout_marginRight="@dimen/activity_vertical_margin"
+    android:layout_marginTop="@dimen/activity_hotizontal_margin">
+
+
+    <!-- #1 food picture -->
+    <ImageView
+        android:id="@+id/iv_food"
+        android:layout_width="match_parent"
+        android:layout_height="80sp" />
+
+
+    <!-- #2 food name -->
+    <TextView
+        android:id="@+id/tv_food_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_food"
+        android:gravity="center|bottom"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+
+    <!-- #3 Rating Bar -->
+    <RatingBar
+        android:id="@+id/rb_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_food_name"
+        android:layout_centerHorizontal="true"
+        android:numStars="5"
+        android:progressBackgroundTint="#44444444"
+        android:progressTint="#ffd700"
+        android:scaleX=".5"
+        android:scaleY=".5"
+        android:secondaryProgressTint="#000000" />
+
+
+    <!-- #4 description -->
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rb_rating"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2sp"
+        android:text="@string/description"
+        android:textSize="12sp" />
+
+    <!-- #5 description of the description :) -->
+    <TextView
+        android:id="@+id/tv_destription_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_description"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14sp"
+        android:textSize="11sp"
+        android:textStyle="italic" />
+
+    <!-- #6 category -->
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_destription_des"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2sp"
+        android:text="@string/category"
+        android:textSize="12sp" />
+
+    <!-- #7 spinner for category -->
+    <Spinner
+        android:id="@+id/sp_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_category" />
+
+
+    <!-- #8 ingridients -->
+    <TextView
+        android:id="@+id/tv_ingridients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sp_category"
+        android:layout_centerHorizontal="true"
+        android:text="@string/ingridients"
+        android:textSize="12sp" />
+
+    <!-- #9 ListView for ingridients -->
+    <ListView
+        android:id="@+id/lv_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ingridients"
+        android:layout_centerHorizontal="true"
+        android:scaleX=".5"
+        android:scaleY=".5" />
+
+
+    <!-- #10 calory -->
+    <TextView
+        android:id="@+id/tv_calorie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lv_list_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0sp"
+        android:text="@string/calorie"
+        android:textSize="12sp" />
+
+    <!-- #11 calory description -->
+    <TextView
+        android:id="@+id/tv_calorie_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_calorie"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="7sp"
+        android:textSize="11sp"
+        android:textStyle="italic" />
+
+
+    <!-- #12 price  -->
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="24sp"
+        android:textStyle="italic" />
+
+    <!-- #13 currency -->
+    <TextView
+        android:id="@+id/tv_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/tv_price"
+        android:text="@string/currency"
+        android:textSize="24sp"
+        android:textStyle="italic" />
+
+
+    <!-- #14 order button -->
+    <Button
+        android:id="@+id/bt_button_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/button_order" />
+
+</RelativeLayout>
